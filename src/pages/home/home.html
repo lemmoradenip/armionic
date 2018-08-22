@@ -1,17 +1,113 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+
+<ion-header no-padding>
+    <ion-navbar >
+        
+        <ion-title text-center> 
+          <img alt="logo" height="40"   src="assets/img/clogo.png" > 
+       <h6>Al-Rashid Mall Branch</h6>
+        </ion-title>        
+      </ion-navbar>
+  <ion-toolbar >      
+      <ion-searchbar  (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
+  <ion-toolbar no-padding>
+   
+      <ion-segment [(ngModel)]="Segments">      
+          <ion-segment-button value="Shops">
+            Shop
+          </ion-segment-button>
+          <ion-segment-button value="Dinning">
+              Dine
+            </ion-segment-button>
+          <ion-segment-button value="Fun">
+           Fun
+          </ion-segment-button>
+          <ion-segment-button value="Offers">
+            Offers
+          </ion-segment-button>
+          <ion-segment-button value="Events">
+              Events 
+            </ion-segment-button>
+        </ion-segment>
+     
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content class="card-background-page">    
+<div [ngSwitch]="Segments">
+    <ion-list *ngSwitchCase="'Shops'">
+     
+          <ion-card ion-item *ngFor="let item of items" >
+              <img src="assets/img/card-madison.png"/>
+              <div class="card-title">{{ item }}</div>
+              <div class="card-subtitle">41 Listings</div>
+            </ion-card>
+    
+    </ion-list>
+    <ion-list *ngSwitchCase="'Events'">
+      <ion-card ion-item *ngFor="let item of items" >
+            <img src="assets/img/nin-live.png"/>
+            <ion-card-content>
+                <ion-card-title>
+                  Nine Inch Nails Live
+                </ion-card-title>
+                <p>
+                  The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+                </p>
+              </ion-card-content>
+          <ion-row>
+              <ion-col>
+                  <button ion-button clear small color="danger" icon-start>
+                    <ion-icon name='star'></ion-icon>
+                    Favorite
+                  </button>
+                </ion-col>
+                <ion-col text-center>
+                    <button ion-button clear small color="danger" icon-start>
+                      <ion-icon name='musical-notes'></ion-icon>
+                      Listen
+                    </button>
+                  </ion-col>
+                  <ion-col text-right>
+                    <button ion-button clear small color="danger" icon-start>
+                      <ion-icon name='share-alt'></ion-icon>
+                      Share
+                    </button>
+                  </ion-col>
+          </ion-row>
+         
+          </ion-card>
+  
+  </ion-list>
+  <ion-list *ngSwitchCase="'Fun'">
+     
+      <ion-card ion-item *ngFor="let item of items" >
+          <img src="assets/img/card-amsterdam.png"/>
+          <div class="card-title">São Paulo</div>
+          <div class="card-subtitle">41 Listings</div>
+        </ion-card>
+
+</ion-list>
+<ion-list *ngSwitchCase="'Offers'">
+     
+    <ion-card ion-item *ngFor="let item of items" >
+        <img src="assets/img/card-sf.png"/>
+        <div class="card-title">São Paulo</div>
+        <div class="card-subtitle">41 Listings</div>
+      </ion-card>
+
+</ion-list>
+<ion-list *ngSwitchCase="'Dinning'">
+     
+   <ion-item *ngFor="let item of items">
+      <ion-thumbnail item-start>
+          <img src="assets/img/food.png">
+        </ion-thumbnail>
+        <h2>{{item}}</h2>
+        <p>Open: Today Close at 8pm</p>
+        <button ion-button clear item-end>View</button>
+   </ion-item>
+
+</ion-list>
+</div>
 </ion-content>
