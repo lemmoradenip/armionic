@@ -1,3 +1,21 @@
-page-about {
+.about-image 
+{
+    width: 100%;
+    height: 100;
+}
+.read-less{display: none;}
+.read-more{display: inline;}
 
+p
+{
+    font-style: oblique;
+    text-align: justify;
+    text-justify: inter-word;
+
+}
+.btn-read-more
+{
+    align-items: center;
+    background-color: transparent;
+    text-underline-position: below;
 }

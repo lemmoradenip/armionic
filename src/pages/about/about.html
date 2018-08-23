@@ -1,11 +1,69 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Mall Info
     </ion-title>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
+<ion-content no-padding>
+  <ion-card class="cards-list-demo">
+    <img class="about-image" src="assets/img/card-madison.png">
+    <ion-card-title>
+      <p>
+       <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+        <span class="read-less">
+        Ut enim ad minim veniam. quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+        <button  outline round > Read more</button>
+      </p>
+    </ion-card-title>
+    <ion-list>
+        <button ion-item>
+          <ion-icon name="globe" item-start></ion-icon>
+          www.artar.com.sa
+        </button>
+        <button ion-item>
+          <ion-icon name="call" item-start></ion-icon>
+         966- 4646-111
+        </button>
+  
+        <button ion-item>
+          <ion-icon name="send" item-start></ion-icon>
+          infor@artar.com.sa
+        </button>
+        <button ion-item>
+            <ion-icon name="logo-whatsapp" item-start></ion-icon>
+            +966-05-1234-5678
+          </button>
+      
+      <button ion-item>
+        <ion-icon name="clock" item-start></ion-icon>
+        Opening Hours
+      </button>
+      <button ion-item>
+        <ion-icon name="locate" item-start></ion-icon>
+        Maps
+      </button>
+
+      <button ion-item>
+        <ion-icon name="information-circle" item-start></ion-icon>
+        Terms and Condition
+      </button>
+
+    </ion-list>
+  </ion-card>
+
+  <ion-fab right bottom>
+    <button ion-fab color="light"><ion-icon name="arrow-dropup"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-instagram"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
 
 </ion-content>
